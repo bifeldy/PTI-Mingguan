@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First Angular Apps</title>
+        <link rel="stylesheet" href="w3.css" />
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+        <style>
+            .done{
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <div ng-app="todoList" ng-controller="todoController">
+            <div class="w3-container w3-half w3-display-topmiddle w3-margin-top">
+                <div class="w3-container w3-blue">
+                    <h2>New Todo</h2>
+                </div>
+                <form class="w3-container w3-border">
+                    <p>
+                        <input placeholder="Todo..." class="w3-input" type="text" ng-model="newTodo" />
+                    </p>
+                    <p>
+                        <button ng-click="addTodo()" class="w3-btn w3-blue w3-large">Register</button>
+                    </p>
+                </form>
+                <div class="w3-container w3-margin-top w3-blue">
+                    <h2>Todo List</h2>
+                </div>
+                <div class="w3-container w3-border w3-padding">
+                    <div ng-show="isEmpty()">
+                        <i>Nothing to do?</i>
+                    </div>
+                    <div ng-show="!(isEmpty())">
+                        <input class="w3-input" type="text" placeholder="Filter Todos" ng-model="filterKeyword" />
+                    </div>
+                    <div ng-repeat="todo in todos | filter:filterKeyword">
+                        <p ng-class="todo.done ? 'done' : ''" style="width: 95%; float:left;" ng-click="changeStatus(todo)">
+                            {{ todo.name }}
+                        </p>
+                        <p style="width: 5%; float: left;" ng-click="delete(todo)" >
+                            <i class="fa fa-close"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

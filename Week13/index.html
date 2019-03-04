@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My First Angular Apps</title>
+		<link rel="stylesheet" type="text/css" href="w3.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+		<style>
+			.done{
+				text-decoration: line-through;
+			}
+			.form-message{
+				float: right;
+				padding-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-app="akikStore">
+			<div class="w3-container w3-half w3-display-topmiddle w3-margin-top">
+				<div class="w3-container w3-blue">
+					<h2>
+						<a href='/'>New Gemstone</a>
+						<a href="/gem-list">Gem List</a>
+					</h2>
+				</div>
+				<div ng-view>
+				</div>
+			</div>
+		</div>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

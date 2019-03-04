@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel Room Reservation</title>
+	<link rel="stylesheet" type="text/css" href="jui.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<!--Table-->
+	<div class="container col-besar">
+		<table id="tableOrder">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Ordered Room</th>
+					<th>Deposit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Peter</td>
+					<td>Griffin</td>
+					<td>$100</td>
+				</tr>
+				<tr>
+					<td>Lois</td>
+					<td>Griffin</td>
+					<td>$150</td>
+				</tr>
+				<tr>
+					<td>Joe</td>
+					<td>Swanson</td>
+					<td>$300</td>
+				</tr>
+				<tr>
+					<td>Cleveland</td>
+					<td>Brown</td>
+					<td>$250</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="container col-kecil" id="accordion">
+		<h3>Single Room</h3>
+		<div id="single">
+			<p>
+				Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id ante tempus hendrerit. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo. Suspendisse eu ligula. Nulla facilisi. Donec id justo. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Curabitur suscipit suscipit tellus.
+			</p>
+			<button class="btnAddOrder">Order Room</button>
+		</div>
+		<h3>Double Room</h3>
+		<div id="double">
+			<p>
+				Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id ante tempus hendrerit. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo. Suspendisse eu ligula. Nulla facilisi. Donec id justo. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Curabitur suscipit suscipit tellus.
+			</p>
+			<button class="btnAddOrder">Order Room</button>
+		</div>
+		<h3>Duplex</h3>
+		<div id="duplex">
+			<p>
+				Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id ante tempus hendrerit. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo. Suspendisse eu ligula. Nulla facilisi. Donec id justo. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Curabitur suscipit suscipit tellus.
+			</p>
+			<button class="btnAddOrder">Order Room</button>
+		</div>
+		<h3>Cabana</h3>
+		<div id="cabana">
+			<p>
+				Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id ante tempus hendrerit. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo. Suspendisse eu ligula. Nulla facilisi. Donec id justo. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Curabitur suscipit suscipit tellus.
+			</p>
+			<button class="btnAddOrder">Order Room</button>
+		</div>
+
+	</div>
+
+	<div id="dialog-form" title="Create New Order">
+		<p class="validateTips">All form fields are required</p>
+		<form>
+			<label for="name">Name</label>
+			<input type="text" name="name" id="inputNama" class="text ui-widget-content ui-corner-all">
+			<label for="price">Price</label>
+			<input type="number" name="price" id="inputHarga" class="text ui-widget-content ui-corner-all" readonly>
+			<label for="deposit">Deposit</label>
+			<input type="number" name="deposit" id="inputDeposit" class="text ui-widget-content ui-corner-all">
+		</form>
+	</div>
+	
+<div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website_w9pti&amp;utm_content=footer_img"><img src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"  alt="www.000webhost.com"></a></div></body>
+</html>

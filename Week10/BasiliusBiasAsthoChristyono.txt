@@ -1,0 +1,30 @@
+GRID SYSTEM
+Sistem grid Bootstrap menggunakan serangkaian kontainer, baris,
+dan kolom untuk tata letak dan menyelaraskan konten.
+Ini dibangun dengan flexbox dan sepenuhnya responsif.
+Ukuran lebar maksimum yaitu 12 bagian, dimana terdapat 5
+kategori dari extra-small hingga extra-large.
+
+
+
+KOMPONEN LAINNYA
+Saya biasa memakai:
+1.  Alert -> untuk memberi notifikasi ke user.
+2.  ModalBox -> membuat kotak pop-up.
+3.  Card -> buat kartu dimana ada gambar dan deskripsi.
+4.  Button -> tombol sering buat form / login
+5.  Jumbotron -> buat header gitu lha.
+6.  Pagination -> buat nomor halaman biar ga cape scroll panjang ke bawah.
+7.  Progress -> progressbar kayak loading gitu.
+8.  Dropdown -> di pake buat pilihan dalam form.
+9.  Tooltip -> untuk bala bantuan help teks.
+10. Nav & Navbar -> buat menu.
+
+
+
+JS BOOTSTRAP
+- Transitions: basic helper untuk event transisi dan emulator transisi dalam CSS
+- ScrollSpy: secara otomatis meng-update nav target berdasarkan posisi scroll
+- Carousel: komponen slideshow yang menampilkan element secara cycle
+- Collapse: plug-in fleksibel yang memanfaatkan beberapa class untuk melakukan behaviour secara mudah
+- Popovers: menambahkan overlay kecil pada konten di elemen tertentu untuk menampilkan informasi tambahan

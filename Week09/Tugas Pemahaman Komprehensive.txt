@@ -1,0 +1,88 @@
+/*
+    Basilius Bias Astho Christyono
+    000.000.13536
+*/
+
+
+
+Kelebihan jQuery:
+[-] Lebih Simple / Lebih Pendek / Lebih Singkat
+[-] Lebih Mudah Digunakan
+
+
+
+jQuery POST: $.post(URL,data,callback);
+
+$("button").click(function(){
+    $.post("http://www.budi.com/info-diri", {
+        nama: "Budi",
+        alamat: "Jl Merpati",
+        pekerjaan: "Programmer"
+    });
+});
+
+
+
+Callback function: fungsi yang akan dijalankan setelah melakukan perintah,
+misalnya setelah melakukan POST DataCue, maka akan dapat Response,
+entah itu status dari pengiriman data tersebut, ataupun balasan kiriman lainnya.
+
+
+
+.children() digunakan untuk mengambil elemen yang merupakan 1 tingkat di
+dalamnya misal $("ul").children() => Maka Akan Mendapatkan Semua Element li
+
+<body class="descendants">body (great-grandparent)
+  <div style="width:500px;">div (grandparent)
+    <ul>ul (direct parent)  
+      <li>li (child)
+        <span>span (grandchild)</span>
+      </li>  
+      <li>li (child)
+        <span>span (grandchild)</span>
+      </li>
+    </ul>   
+  </div>
+</body>
+
+
+
+.html() digunakan untuk mendapatkan elemen innerHTML tag .. atau disebut
+juga untuk mengambil seluruh isi elemen html dari selectornya
+
+$("body").html() => Maka akan mendapat
+`<button>Change content of all p elements</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>`
+
+<body>
+<button>Change content of all p elements</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+</body>
+
+
+
+.fadeIn() atau .fadeOut() merupakan efek yang buat menggunakan jQuery
+dimana ini akan memberi efek ke suatu tag Element untuk menmunculkan /
+menyembunyikan suatu tag Element
+
+$("button").click(function(){
+    $("p").fadeOut();
+});
+
+$("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+});
+
+
+
+.promise() yaitu suatu proses mengembalikan Janji yang dihasilkan secara
+dinamis yang diselesaikan setelah semua tindakan dari jenis tertentu
+yang terikat pada koleksi, antri atau tidak, telah berakhir.
+
+$( "div" ).promise().done(function() {
+    $( "p" ).append( " Finished! " );
+});

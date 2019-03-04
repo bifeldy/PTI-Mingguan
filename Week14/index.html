@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Angular Apps</title>
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<style>
+		.undone{
+			color: black;
+		}
+		.current{
+			color:gray;
+		}
+		.wrong{
+			color:red;
+		}
+		.right{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div ng-app="typingMania">
+		<div class="w3-container">
+			<div class="w3-row w3-center">
+				<div class="w3-col s3">
+					<div class="w3-container w3-margin-top">
+						<div class="w3-container w3-blue">
+							<h1>Do it! Just do it!</h1>
+						</div>
+						<div class="w3-container w3-sand">
+							<h3>Dont let your dream be dream!</h3>
+						</div>
+						<div class="w3-container w3-indigo">
+							<h3>Yesterday you say tomorrow!</h3>
+						</div>
+						<div class="w3-container w3-pale-yellow">
+							<h3>So just do it!</h3>
+						</div>
+						<div class="w3-container w3-deep-purple">
+							<h3>Make your dream come true!</h3>
+						</div>
+						<div class="w3-container w3-pale-red">
+							<h3>JUST DO IT!</h3>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col s6" ng-controller="typingController">
+					<div class="w3-container">
+						<div class="w3-container w3-margin-top w3-blue">
+							<h2>Ipsum Mania!</h2>
+						</div>
+						<div class="w3-container w3-border">
+							<p class="w3-justify">
+								<span ng-repeat = "t in texts" ng-class="t.status">
+										{{t.text}}
+								</span>
+							</p>
+							<form class="w3-container w3-padding-bottom">
+									<input type="text" class="w3-input w3-border" placeholder="Type your text here..."
+									ng-change="submitInput()" ng-click="startGame()" ng-model="playerInput" ng-trim="false">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col s3" ng-controller="highScoreController">
+					<div class="w3-container w3-margin-top">
+						<div class="w3-container w3-blue">
+							<h2>Leaderboard</h2>
+						</div>
+						<div class="w3-container w3-border w3-justify">
+							<ol>
+								<li ng-repeat="hs in highScores | orderBy:wpm | limitTo:10 track by $index">
+									{{hs.name}} ({{hs.wpm | number: 2}})
+								</li>
+							</ol>
+							<div ng-show="checkEmpty()">
+								No Data
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="angular.min.js"></script>
+	<script src="angular-route.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

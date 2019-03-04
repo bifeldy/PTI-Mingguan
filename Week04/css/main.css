@@ -1,0 +1,245 @@
+/*
+    Basilius Bias Astho Christyono
+    000.000.13536 ~ PTI
+    http://www.Bifeldy.tk/pti/week04/
+*/
+
+
+
+/* Browser Settings */
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+::-webkit-scrollbar-track
+{
+  background: red;
+}
+::-webkit-scrollbar-thumb
+{
+  background: yellow;
+}
+
+
+
+/* Footer */
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+}
+
+.pembatas {
+	height: 6px;
+	background: url(../img/hr.png) repeat-x 0 0;
+    border: 0;
+}
+
+
+
+/* Special Gift For You */
+
+#mobile {
+    display: none;
+    width: 100%;
+}
+#desktop {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+    #mobile {
+        display: block;
+        width: 100%;
+    }
+    #desktop {
+        display: none;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .container {
+        width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+/**/
+
+body {
+    margin: 0px;
+    height: 100%;
+    color: white;
+    background-color: black;
+}
+
+header {
+    font-family: 'Cormorant Garamond';
+}
+
+main {
+    margin-bottom: 1.5rem;
+}
+
+main > span {
+    font-family: 'Indie Flower';
+    font-size: 150%;
+}
+
+main > table {
+    font-family: 'Nanum Pen Script';
+    font-size: 150%;
+}
+
+main > form {
+    font-family: 'Shadows Into Light';
+}
+
+.header {
+    height: 50%;
+    text-align: center;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+#jam {
+    float: right;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: gray;
+}
+
+.footer > div {
+    margin-bottom: 0px;
+}
+
+.col-1  { width:  8.33%; }
+.col-2  { width: 16.66%; }
+.col-3  { width:    25%; }
+.col-4  { width: 33.33%; }
+.col-5  { width: 41.66%; }
+.col-6  { width:    50%; }
+.col-7  { width: 58.33%; }
+.col-8  { width: 66.66%; }
+.col-9  { width:    75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width:   100%; }
+
+[class*="col-"] {
+    float: left;
+}
+
+.center {
+    background-color: maroon;
+    padding: 10px;
+}
+
+div {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input[type=text], input[type=number], select {
+    width:100%;
+    border:1.4px solid yellow;
+    border-radius:4px;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+  
+input[type=text]:focus, 
+input[type=number]:focus,
+select:focus {
+    border-color: greenyellow;
+    box-shadow: 0 0 8px 0 greenyellow;
+}
+  
+.inputWithIcon input[type=text],
+.inputWithIcon input[type=number],
+.inputWithIcon select {
+    padding-left:40px;
+}
+  
+.inputWithIcon{
+    position:relative;
+}
+  
+.inputWithIcon i{
+    position:absolute;
+    left:0;
+    top:0px;
+    padding:10px 10px;
+    color:blueviolet;
+    transition:.3s;
+}
+  
+.inputWithIcon input[type=text]:focus + i,
+.inputWithIcon input[type=number]:focus + i ,
+.inputWithIcon select:focus + i {
+    color: greenyellow;
+}
+  
+.inputWithIcon.inputIconBg i{
+    background-color:cyan;
+    color:blueviolet;
+    padding:9px 5px;
+    border-radius:4px 0 0 4px;
+}
+  
+.inputWithIcon.inputIconBg input[type=text]:focus + i,
+.inputWithIcon.inputIconBg input[type=number]:focus + i,
+.inputWithIcon.inputIconBg select:focus + i{
+    color:blueviolet;
+    background-color: greenyellow;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: yellow;
+    color: red;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0s; /** 0.5s Kelamaan Bro */
+}
+
+input[type=submit]:hover {
+    background-color: blue;
+    color: yellow;
+}
+
+input[type=submit]:active {
+    background-color: red;
+    color: cyan;
+}
+
+tr {
+    border-radius: 5px;
+}
+
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}

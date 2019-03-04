@@ -1,0 +1,77 @@
+<form id="gemForm" class="w3-container w3-border" name="gemForm">
+	<p>
+		<select class="w3-select" name="type" ng-model="newGem.type" required>
+			<option value="" disabled selected>Choose your option</option>
+			<option value="images/diamond.jpg">Diamond</option>
+			<option value="images/emerald.jpg">Emerald</option>
+			<option value="images/pearl.png">Pearl</option>
+			<option value="images/peridot.jpg">Peridot</option>
+			<option value="images/sapphire.jpg">Sapphire</option>
+		</select>
+		<span
+			class="form-message w3-text-deep-orange" 
+			ng-show="gemForm.weight.$dirty && gemForm.type.$error.required">
+			You must choose gem type.
+		</span>
+	</p>
+	<p>
+		<input
+			placeholder="Weight in gram..."
+			name="weight"
+			class="w3-input"
+			type="number"
+			ng-model="newGem.weight"
+			required
+		>
+		<span
+			class="form-message w3-text-deep-orange"
+			ng-show="gemForm.weight.$dirty && gemForm.weight.$error.required">
+			Weight is required.
+		</span>
+	</p>
+	<p>
+		<input
+			placeholder="Price in rupiah..."
+			name="price"
+			class="w3-input"
+			type="number"
+			ng-model="newGem.price"
+			required
+		>
+		<span
+			class="form-message w3-text-deep-orange"
+			ng-show="gemForm.price.$dirty && gemForm.price.$error.required">
+			Price is required.
+		</span>
+	</p>
+	<p>
+		<input
+			placeholder="Contact Number..."
+			name="contactNumber"
+			class="w3-input"
+			type="text"
+			ng-model="newGem.contactNumber"
+			required
+		>
+		<span
+			class="form-message w3-text-deep-orange"
+			ng-show="gemForm.contactNumber.$dirty && gemForm.contactNumber.$error.required">
+			Contact Number is required.
+		</span>
+	</p>
+	<p>
+		<input
+			placeholder="Description..."
+			name="description"
+			class="w3-input"
+			type="text"
+			ng-model="newGem.description"
+		>
+		<button
+			ng-click="addGem()"
+			class="w3-btn w3-blue w3-large"
+			ng-disabled="gemForm.price.$error.required || gemForm.contactNumber.$error.required || gemForm.type.$error.required || gemForm.weight.$error.required">
+			Register
+		</button>
+	</p>
+</form>

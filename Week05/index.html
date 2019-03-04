@@ -1,0 +1,180 @@
+<!--
+    Basilius Bias Astho Christyono
+    000.000.13536 ~ PTI
+    http://www.Bifeldy.tk/pti/week05/
+-->
+<!DOCTYPE html>
+
+<!-- Main HTML -->
+<html lang="id-ID">
+
+    <!-- Main Head -->
+    <head>
+
+        <!-- Browser Settings -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Bifeldy">
+		<meta name="keywords" content="Bifeldy">
+		<meta name="copyright" content="Bifeldy">
+        <meta name="author" content="Bifeldy">
+        
+        <!-- Site Settings -->
+        <title>Bifeldy | AJAX</title>
+        <link rel='shortcut icon' href='./img/Mitsuboshi-Colors.ico' />
+
+        <!-- Styles  -->
+        <link rel="stylesheet" href="./css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./js/main.js"></script>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant+Garamond">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
+
+    </head>
+
+    <!-- Main Site -->
+    <body onload="BasiliusBiasAsthoChristyono(); startTime();">
+
+        <!-- Background Effects -->
+        <div class="bg-fix">
+			<img src="./img/star_yellow.png" alt="" class="bg-rotate bg-rotate-1" style="margin-left:500px; top:17px; width:175px;">
+			<img src="./img/star_red.png" alt="" class="bg-rotate bg-rotate-2" style="margin-left:608px; top:350px; width:64px;">
+			<img src="./img/star_blue.png" alt="" class="bg-rotate bg-rotate-3" style="margin-left:416px; top:526px; width:125px;">
+			<img src="./img/star_yellow.png" alt="" class="bg-rotate bg-rotate-4" style="margin-left:400px; top:396px; width:60px;">
+            
+            <img src="./img/star_red.png" alt="" class="bg-rotate bg-rotate-1" style="margin-left:-546px; top:300px; width:40px;">
+			<img src="./img/star_blue.png" alt="" class="bg-rotate bg-rotate-2" style="margin-left:-616px; top:113px; width:60px;">
+			<img src="./img/star_yellow.png" alt="" class="bg-rotate bg-rotate-3" style="margin-left:-280px; top:460px; width:60px;">
+			<img src="./img/star_red.png" alt="" class="bg-rotate bg-rotate-4" style="margin-left:-648px; top:490px; width:100px;">
+		</div>
+
+        <!-- Header -->
+        <header class="col-12 header">
+
+            <!-- Jumlah Data Makanan -->
+            <h1>Bifeldy | AJAX</h1>
+        </header>
+
+        <!-- Content -->
+        <main class="center container">
+
+            <!-- Greet & Clock -->
+            <span class="IndieFlower" id="editor">
+                Hello, 世界！
+            </span>
+            <span class="IndieFlower" id="jam">
+                o'Clockz!
+            </span>
+
+            <!-- Separator -->
+            <hr class="pembatas">
+
+            <!-- Special Gift For You -->
+            <img id="MayoiHachikuji" src="./img/Mayoi-Hachikuji.gif"
+            alt='Mayoi "Hachihachiji, Hachirokuji" Hachikuji' />
+
+            <img id="AyuTsukimiya" src="./img/Ayu-Tsukimiya.gif" alt="Ayu Tsukimiya" />
+
+            <!-- Separator -->
+            <hr class="pembatas">
+
+            <!-- Table -->
+            <h1 id="manusia" class="ShadowsIntoLight">Artist: ???</h1>
+            <table class="ShadowsIntoLight" id="tableUser">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th class="collapseAble">E-Mail</th>
+                        <th class="collapseAble">Alamat</th>
+                        <th>Website</th>
+                        <th>Company</th>
+                        <th style="width: 62px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;" colspan="6">No Data!</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Separator -->
+            <hr class="pembatas">
+
+            <!-- Table -->
+            <h1 id="produk" class="NanumPenScript">Album: ???</h1>
+            <table class="NanumPenScript" id="tableAlbum">
+                <thead>
+                    <tr>
+                        <th>Albums Title</th>
+                        <th style="width: 57px;">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;" colspan="2">No Data!</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Separator -->
+            <hr class="pembatas">
+
+        </main>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal IndieFlower" style="opacity: 0.975;">
+
+            <!-- Modal Content -->
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <span class="close" onclick="tutup();">&times;</span>
+                    <h2 id="albumTitle">Album Title</h2>
+                </div>
+
+                <!-- Modal Body -->
+                <div id="single" class="modal-body" style="background-image: url(./img/Maido-chan.gif); background-repeat: no-repeat; background-position: bottom right; background-size: 20%"></div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <h3 id="totalSingle">Total Single: </h3>
+                </div>
+
+            </div>
+        
+        </div>
+
+        <!-- Footer -->
+        <footer class="col-12 footer">
+            <div class="ShadowsIntoLight" style="float: left;">
+                &nbsp;
+                <span class="copyleft">
+                    <font color="#00ff55">&copy; </font>
+                </span>
+                <font color="#d2476e">2016 </font>
+                <font color="#61b7e9">All-Wrong </font>
+                <font color="#fbce78">UnReserved. </font>
+            </div>
+            <div class="IndieFlower" style="float: right;">
+                <font color="#00ff55">Basilius </font>
+                <font color="#d2476e">Bias </font>
+                <font color="#61b7e9">Astho </font>
+                <font color="#fbce78">Ch. </font>
+                &nbsp;
+            </div>
+        </footer>
+
+    </body>
+
+</html> 

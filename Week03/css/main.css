@@ -1,0 +1,279 @@
+/*
+    Basilius Bias Astho Christyono
+    000.000.13536 ~ PTI
+    http://www.Bifeldy.tk/pti/week03/
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+nav {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+li {
+    font-weight: bold;
+    float: left;
+}
+
+nav li a:hover {
+    color: red;
+}
+
+a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+button {
+    background-color: #800080;
+    color: red;
+}
+
+button:hover {
+    background-color: greenyellow;
+    color: blue;
+}
+
+button:active {
+    background-color: blue;
+    color: greenyellow;
+}
+
+div > p::first-letter { 
+    font-size: 200%;
+    color: #8A2BE2;
+}
+
+#home {
+    font-family: 'Shadows Into Light';
+}
+
+#aboutme {
+    font-family: 'Cormorant Garamond';
+}
+
+#aboutmemore {
+    font-family: 'Nunito';
+}
+
+#portfolio {
+
+}
+
+#skills {
+    font-family: 'Nanum Pen Script';
+}
+
+.circle {
+    border-radius: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.black {
+    background-color: #222222;
+}
+
+.white {
+    background-color: whitesmoke;
+}
+
+.font-white {
+    color: white;
+}
+
+.kotak {
+    margin: 5px;
+}
+
+.kotak img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kotak:hover {
+    transform: scale(1.125);
+    transition: 0.2s;
+}
+
+
+
+/* For Mobile Phones */
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For Tablets 600++ px */
+    .col-m-1  { width:  8.33%; }
+    .col-m-2  { width: 16.66%; }
+    .col-m-3  { width:    25%; }
+    .col-m-4  { width: 33.33%; }
+    .col-m-5  { width: 41.66%; }
+    .col-m-6  { width:    50%; }
+    .col-m-7  { width: 58.33%; }
+    .col-m-8  { width: 66.66%; }
+    .col-m-9  { width:    75%; }
+    .col-m-10 { width: 83.33%; }
+    .col-m-11 { width: 91.66%; }
+    .col-m-12 { width:   100%; }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For Tablets 768++ px */
+    .col-1  { width:  8.33%; }
+    .col-2  { width: 16.66%; }
+    .col-3  { width:    25%; }
+    .col-4  { width: 33.33%; }
+    .col-5  { width: 41.66%; }
+    .col-6  { width:    50%; }
+    .col-7  { width: 58.33%; }
+    .col-8  { width: 66.66%; }
+    .col-9  { width:    75%; }
+    .col-10 { width: 83.33%; }
+    .col-11 { width: 91.66%; }
+    .col-12 { width:   100%; }
+}
+
+.row::after {
+    content: '';
+    clear: both;
+    display: block;
+    margin: 0px;
+}
+
+.row div {
+    float: left;
+}
+
+
+
+/* Responsive Images & Padding */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.padding-8 {
+    padding: 8px;
+}
+
+.padding-16 {
+    padding: 16px;
+}
+
+.padding-32 {
+    padding: 32px;
+}
+
+.padding-64 {
+    padding: 64px;
+}
+
+.padding-128 {
+    padding: 128px;
+}
+
+
+
+/* Responsive Table */
+
+table {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table tr {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 600px) {
+    /* For Phones 600-- px */
+    table {
+        border: 0;
+    }
+    table thead {
+        display: none;
+    }
+    table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+    table td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+    }
+    table td:last-child {
+        border-bottom: 0px;
+    }
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+
+
+/* Browser Settings */
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+::-webkit-scrollbar-track
+{
+  background: red;
+}
+::-webkit-scrollbar-thumb
+{
+  background: yellow;
+}

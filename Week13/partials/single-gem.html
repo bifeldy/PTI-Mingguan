@@ -1,0 +1,11 @@
+<div
+	class="w3-card-12"
+	style="width:48%; margin-bottom:24px; float:left; margin-left:12px; height: 600px;">
+	<img ng-src="{{gemData.type}}" alt="Norway" style="width:100%;">
+	<div class="w3-container">
+		<h4>Only Rp. {{gemData.price/gemData.weight | number:2}} / grams</h4>
+		<p>Weight: {{gemData.weight}}</p>
+		<p>Contact: {{gemData.contactNumber}}</p>
+		<p>{{gemData.description}}</p>
+	</div>
+</div>

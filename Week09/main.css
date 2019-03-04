@@ -1,0 +1,93 @@
+*{
+	font-family: Arial, Helvetica, san-serif;
+}
+.container{
+	width: 50%;
+}
+.col-kecil{
+	width: 35%;
+}
+.col-besar{
+	width: 60%;
+}
+body .container{
+	float:left;
+	padding:10px;
+}
+.button{
+	background-color: #007fff;
+	border: none;
+	color:white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	 text-align: left;
+	 padding: 8px;
+}
+
+tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+th{
+	background-color: #007fff;
+	color: white;
+}
+
+label, input{
+	display: block;
+}
+
+input.text{
+	margin-bottom: 12px;
+	width:95%;
+	padding: .4em;
+}
+
+fieldset{
+	padding:0;
+	border:0;
+	margin-top: 25px;
+}
+h1{
+	font-size: 1.2em;
+	margin: .6em 0;
+}
+div#users-contain{
+	width: 360px;
+	margin:20px 0;
+}
+
+div#users-contain table{
+	margin: 1em 0;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div#users-contain table td, div#users-contain table th{
+	border:1px solid #eee;
+	padding: .6em 10px;
+	text-align: left;
+}
+
+.ui-dialog .ui-state-error{
+	padding: .3em;
+}
+
+.validateTips{
+	border: 1px solid transparent; 
+	padding: 0.3em;
+}
+

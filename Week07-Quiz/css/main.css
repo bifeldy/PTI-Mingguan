@@ -1,0 +1,157 @@
+/*
+    Basilius Bias Astho Christyono
+    000.000.13536 ~ PTI
+    http://www.Bifeldy.tk/pti/week04/
+*/
+
+
+
+/* Browser Settings */
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+::-webkit-scrollbar-track
+{
+  background: red;
+}
+::-webkit-scrollbar-thumb
+{
+  background: yellow;
+}
+
+
+
+/* Footer */
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+}
+
+.pembatas {
+	height: 6px;
+	background: url(../img/hr.png) repeat-x 0 0;
+    border: 0;
+}
+
+
+
+/* Special Gift For You */
+
+#mobile {
+    display: none;
+    width: 100%;
+}
+#desktop {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+    #mobile {
+        display: block;
+        width: 100%;
+    }
+    #desktop {
+        display: none;
+        width: 100%;
+    }
+}
+
+
+/**/
+
+body {
+    margin: 0px;
+    height: 100%;
+    background: url('../img/bg.jpg') fixed center no-repeat;
+    background-size: cover;
+}
+
+header {
+    font-family: 'Cormorant Garamond';
+}
+
+main {
+    margin-bottom: 1.5rem;
+}
+
+main > span {
+    font-family: 'Indie Flower';
+    font-size: 150%;
+}
+
+main > table {
+    font-family: 'Nanum Pen Script';
+    font-size: 150%;
+}
+
+main > form {
+    font-family: 'Shadows Into Light';
+}
+
+.header {
+    height: 50%;
+    text-align: center;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+#jam {
+    float: right;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: cornsilk;
+}
+
+.footer > div {
+    margin-bottom: 0px;
+}
+
+.col-1  { width:  8.33%; }
+.col-2  { width: 16.66%; }
+.col-3  { width:    25%; }
+.col-4  { width: 33.33%; }
+.col-5  { width: 41.66%; }
+.col-6  { width:    50%; }
+.col-7  { width: 58.33%; }
+.col-8  { width: 66.66%; }
+.col-9  { width:    75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width:   100%; }
+
+[class*="col-"] {
+    float: left;
+}
+
+.container {
+    padding: 10px;
+}
+
+div {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+tr {
+    border-radius: 5px;
+}
+
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}

@@ -1,0 +1,195 @@
+<!--
+    Basilius Bias Astho Christyono
+    000.000.13536 ~ PTI
+    http://www.Bifeldy.tk/pti/week04/
+-->
+<!DOCTYPE html>
+
+<!-- Main HTML -->
+<html lang="id-ID">
+
+    <!-- Main Head -->
+    <head>
+
+        <!-- Browser Settings -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Bifeldy">
+		<meta name="keywords" content="Bifeldy">
+		<meta name="copyright" content="Bifeldy">
+        <meta name="author" content="Bifeldy">
+        
+        <!-- Site Settings -->
+        <title>Bifeldy | JavaScript</title>
+
+        <!-- Styles  -->
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+        <!-- Scripts -->
+        <script src="./js/main.js"></script>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant+Garamond">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
+
+    </head>
+
+    <!-- Main Site -->
+    <body onload="BasiliusBiasAsthoChristyono(); startTime();">
+
+        <!-- Header -->
+        <header class="col-12 header">
+
+            <!-- Jumlah Data Makanan -->
+            <h1 id="manusia">Jumlah Manusia: ???</h1>
+        </header>
+
+        <!-- Content -->
+        <main class="center container">
+
+            <!-- Greet & Clock -->
+            <span id="editor">
+                Hello, 世界！
+            </span>
+            <span id="jam">
+                o'Clockz!
+            </span>
+
+            <!-- Separator -->
+            <hr class="pembatas">
+
+            <!-- Special Gift For You -->
+            <img id="mobile" src="./img/Mayoi-Hachikuji.gif"
+            alt='Mayoi "Hachihachiji, Hachirokuji" Hachikuji' />
+
+            <img id="desktop" src="./img/Ayu-Tsukimiya.gif" alt="Ayu Tsukimiya" />
+
+            <!-- Separator -->
+            <hr class="pembatas">
+
+            <!-- Table -->
+            <table id="tableItem">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Alamat</th>
+                        <th>Telepon</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bias</td>
+                        <td>Nomaden</td>
+                        <td>0889xxxxxx</td>
+                        <td>Sadistic</td>
+                    </tr>
+                    <tr>
+                        <td>Steven</td>
+                        <td>Nokturnal</td>
+                        <td>081xxxxxxx</td>
+                        <td>Pedo 'Licon</td>
+                    </tr>
+                    <tr>
+                        <td>Anna</td>
+                        <td>NEET</td>
+                        <td>08xxxxxxxx</td>
+                        <td>Anak Bawang</td>
+                    </tr>
+                    <tr>
+                        <td>Malvin</td>
+                        <td>Rabu' Hotel</td>
+                        <td>0xxxxxxxxx</td>
+                        <td>S / M ? xD</td>
+                    </tr>
+                    <tr>
+                        <td>Reynaldi</td>
+                        <td>Hikikomori</td>
+                        <td>xxxxxxxxxx</td>
+                        <td>Maso'</td>
+                    </tr>
+                    <tr>
+                        <td>Johan</td>
+                        <td>404!</td>
+                        <td>----------</td>
+                        <td>Undetected</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Separator -->
+            <hr class="pembatas">
+
+            <!-- Form -->
+            <form id="frmSubmit" onsubmit="TambahData();">
+
+                <label for="itemName">Nama</label>
+                <label id="errorName" style="color: yellow;"></label>
+                <div class="inputWithIcon inputIconBg">
+                    <input type="text" name="itemName" id="itemName" placeholder="Nama Lengkap / Panggilan" />
+                    <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+
+                <label for="itemAddress">Alamat</label>
+                <label id="errorAddress" style="color: yellow;"></label>
+                <div class="inputWithIcon inputIconBg">
+                    <input type="text" name="itemAddress" id="itemAddress" placeholder="Alamat Tempat Tinggal" />
+                    <i class="fa fa-map-marker fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+
+                <label for="itemPhone">Telepon</label>
+                <label id="errorPhone" style="color: yellow;"></label>
+                <div class="inputWithIcon inputIconBg">
+                    <input type="number" name="itemPhone" id="itemPhone" placeholder="Nomor Telepon" />
+                    <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+
+                <label for="itemStatus">Status</label>
+                <label id="errorStatus" style="color: yellow;"></label>
+                <div class="inputWithIcon inputIconBg">
+                    <select name="itemStatus" id="itemStatus" onchange="statusCheck(this.options[this.selectedIndex].value);">
+                        <option value="-">Pilih Status</option>
+                        <option value="Jomblo">Jomblo</option>
+                        <option value="Menikah">Menikah</option>
+                        <option value="Gonta-Ganti">Gonta-Ganti</option>
+                        <option value="Pedo">Pedo</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                    <i class="fa fa-venus-mars fa-lg fa-fw" aria-hidden="true"></i>
+                    <div id="other" style="margin-top:5px;"></div>
+                </div>
+                
+                <input type="submit" id="btnSubmit" value="Submit" />
+            </form>
+        </main>
+
+        <!-- Footer -->
+        <footer class="col-12 footer">
+            <div style="font-family: 'Shadows Into Light'; float: left;">
+                &nbsp;
+                <span class="copyleft">
+                    <font color="#00ff55">&copy; </font>
+                </span>
+                <font color="#d2476e">2016 </font>
+                <font color="#61b7e9">All-Wrong </font>
+                <font color="#fbce78">UnReserved. </font>
+            </div>
+            <div style="font-family: 'Indie Flower'; float: right;">
+                <font color="#00ff55">Basilius </font>
+                <font color="#d2476e">Bias </font>
+                <font color="#61b7e9">Astho </font>
+                <font color="#fbce78">Ch. </font>
+                &nbsp;
+            </div>
+        </footer>
+
+    </body>
+
+</html> 
